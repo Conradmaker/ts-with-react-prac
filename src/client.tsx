@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import NumberBaseball from './numberBaseball/NumberBaseball';
-//import GuGuDan from './GuGuDan';
+//import NumberBaseball from './numberBaseball/NumberBaseball';
+import ResponseCheck from './responseCheck/ResponseCheck';
+//import GuGuDan from './guguDan/GuGuDan';
 //import WorldRelay from './wordRelay/WordRelay';
 
-ReactDOM.render(<NumberBaseball />, document.querySelector('#root'));
+ReactDOM.render(<ResponseCheck />, document.querySelector('#root'));

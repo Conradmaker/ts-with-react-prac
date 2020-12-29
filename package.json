@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --env development",
-    "dev":"webpack-dev-server --hot"
+    "dev": "webpack-dev-server --hot"
   },
   "author": "conrad",
   "license": "ISC",
@@ -21,9 +21,11 @@
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
     "awesome-typescript-loader": "^5.2.1",
+    "css-loader": "^5.0.1",
     "eslint": "^7.16.0",
     "eslint-plugin-prettier": "^3.3.0",
     "prettier": "^2.2.1",
+    "style-loader": "^2.0.0",
     "ts-loader": "^8.0.12",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
