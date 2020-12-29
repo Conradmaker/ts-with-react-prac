@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import NumberBaseball from './numberBaseball/NumberBaseball';
 //import GuGuDan from './GuGuDan';
-import WorldRelay from './wordRelay/WordRelay';
+//import WorldRelay from './wordRelay/WordRelay';
 
-ReactDOM.render(<WorldRelay />, document.querySelector('#root'));
+ReactDOM.render(<NumberBaseball />, document.querySelector('#root'));

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "start": "webpack serve --env development",
+    "dev":"webpack-dev-server --hot"
   },
   "author": "conrad",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "prettier": "^2.2.1",
     "ts-loader": "^8.0.12",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.1"
   }
 }
