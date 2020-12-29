@@ -9,5 +9,6 @@
             "ES2017",
         ],
         "jsx": "react",
-    }
+    },
+    "exclude": ["node_modules"]
 }

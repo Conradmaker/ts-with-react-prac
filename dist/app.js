@@ -194,18 +194,6 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
-/***/ "./src/GuGuDan.tsx":
-/*!*************************!*\
-  !*** ./src/GuGuDan.tsx ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\nexports.__esModule = true;\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar react_1 = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nfunction GuGuDan() {\n    var _a = react_1.useState(10), count = _a[0], setCount = _a[1];\n    var _b = react_1.useState(Math.ceil(Math.random() * 9)), first = _b[0], setFirst = _b[1];\n    var _c = react_1.useState(Math.ceil(Math.random() * 9)), second = _c[0], setSecond = _c[1];\n    var _d = react_1.useState(''), value = _d[0], setValue = _d[1];\n    var _e = react_1.useState(''), result = _e[0], setResult = _e[1];\n    var inputEl = react_1.useRef(null);\n    var onSubmit = function (e) {\n        e.preventDefault();\n        var input = inputEl.current;\n        if (parseInt(value) === first * second) {\n            setResult('정답');\n            setFirst(Math.ceil(Math.random() * 9));\n            setSecond(Math.ceil(Math.random() * 9));\n            setValue('');\n            input === null || input === void 0 ? void 0 : input.focus();\n        }\n        else {\n            setResult('땡');\n            setValue('');\n        }\n    };\n    React.useEffect(function () {\n        var countDown = setInterval(function () {\n            if (count > 0) {\n                setCount(count - 1);\n            }\n            else {\n                setResult('시간초과');\n                setCount(0);\n                clearInterval(countDown);\n            }\n            console.log(count);\n        }, 1000);\n    }, []);\n    return (React.createElement(React.Fragment, null,\n        React.createElement(\"div\", null,\n            first,\n            \"\\uACF1\\uD558\\uAE30\",\n            second,\n            \"\\uB294?\"),\n        React.createElement(\"span\", null, count),\n        React.createElement(\"form\", { onSubmit: onSubmit },\n            React.createElement(\"input\", { ref: inputEl, type: \"number\", value: value, onChange: function (e) { return setValue(e.target.value); } }),\n            React.createElement(\"button\", { type: \"submit\" }, \"\\uC815\\uB2F5\")),\n        React.createElement(\"h1\", null, result)));\n}\nexports[\"default\"] = GuGuDan;\n\n\n//# sourceURL=webpack:///./src/GuGuDan.tsx?");
-
-/***/ }),
-
 /***/ "./src/client.tsx":
 /*!************************!*\
   !*** ./src/client.tsx ***!
@@ -214,7 +202,19 @@ eval("\nexports.__esModule = true;\nvar React = __webpack_require__(/*! react */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nexports.__esModule = true;\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\nvar GuGuDan_1 = __webpack_require__(/*! ./GuGuDan */ \"./src/GuGuDan.tsx\");\nReactDOM.render(React.createElement(GuGuDan_1[\"default\"], null), document.querySelector('#root'));\n\n\n//# sourceURL=webpack:///./src/client.tsx?");
+eval("\nexports.__esModule = true;\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n//import GuGuDan from './GuGuDan';\nvar WordRelay_1 = __webpack_require__(/*! ./wordRelay/WordRelay */ \"./src/wordRelay/WordRelay.tsx\");\nReactDOM.render(React.createElement(WordRelay_1[\"default\"], null), document.querySelector('#root'));\n\n\n//# sourceURL=webpack:///./src/client.tsx?");
+
+/***/ }),
+
+/***/ "./src/wordRelay/WordRelay.tsx":
+/*!*************************************!*\
+  !*** ./src/wordRelay/WordRelay.tsx ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nexports.__esModule = true;\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar react_1 = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar WordRelay = function () {\n    var _a = react_1.useState(''), value = _a[0], setValue = _a[1];\n    var _b = react_1.useState(''), result = _b[0], setResult = _b[1];\n    var _c = react_1.useState('가나다'), word = _c[0], setWord = _c[1];\n    var inputEl = react_1.useRef(null);\n    var onSubmit = react_1.useCallback(function (e) {\n        e.preventDefault();\n        var input = inputEl.current;\n        if (word[word.length - 1] === value[0]) {\n            setResult('성공!');\n            setWord(value);\n            setValue('');\n            input === null || input === void 0 ? void 0 : input.focus();\n        }\n        else {\n            setResult('틀림!');\n            setValue('');\n            input === null || input === void 0 ? void 0 : input.focus();\n        }\n    }, [word, value]);\n    var onChange = react_1.useCallback(function (e) {\n        setValue(e.target.value);\n    }, []);\n    return (React.createElement(React.Fragment, null,\n        React.createElement(\"div\", null, word),\n        React.createElement(\"form\", { onSubmit: onSubmit },\n            React.createElement(\"input\", { ref: inputEl, value: value, onChange: onChange }),\n            React.createElement(\"button\", null, \"\\uC785\\uB825\")),\n        React.createElement(\"div\", null, result)));\n};\nexports[\"default\"] = WordRelay;\n\n\n//# sourceURL=webpack:///./src/wordRelay/WordRelay.tsx?");
 
 /***/ })
 
