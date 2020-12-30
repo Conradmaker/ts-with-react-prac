@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom';
 // import ResponseCheck from './responseCheck/ResponseCheck';
 //import GuGuDan from './guguDan/GuGuDan';
 //import WorldRelay from './wordRelay/WordRelay';
-import RSP from './RSP/RSP';
+//import RSP from './RSP/RSP';
+import Lotto from './lotto/Lotto';
 
-ReactDOM.render(<RSP />, document.querySelector('#root'));
+ReactDOM.render(<Lotto />, document.querySelector('#root'));
