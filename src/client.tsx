@@ -6,13 +6,13 @@ import * as ReactDOM from 'react-dom';
 //import WorldRelay from './wordRelay/WordRelay';
 //import RSP from './RSP/RSP';
 // import Lotto from './lotto/Lotto';
-import App from './App';
 import { Provider } from 'react-redux';
 import store from './modules/store';
+import Games from './Games';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Games />
   </Provider>,
   document.querySelector('#root')
 );
