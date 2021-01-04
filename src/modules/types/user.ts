@@ -16,6 +16,7 @@ export interface LoginData {
 export type UserState = {
   isLoggedIn: boolean;
   data: LoginData | null;
+  error: Error | null;
 };
 export type UserActions =
   | ReturnType<typeof logInRequest>

@@ -1,3 +1,4 @@
+import produce from 'immer';
 import { ADD_POST } from '../actions/post';
 import { PostActions } from '../types/post';
 
@@ -9,12 +10,15 @@ const postReducer = (
   state: PostsState = initialState,
   action: PostActions
 ): PostsState => {
-  switch (action.type) {
-    case ADD_POST:
-      return [...state, action.payload];
-    default:
-      return state;
-  }
+  return produce(state, draft => {
+    switch (action.type) {
+      case ADD_POST:
+        draft.push(action.payload);
+        break;
+      default:
+        break;
+    }
+  });
 };
 
 export default postReducer;
