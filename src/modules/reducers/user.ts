@@ -17,9 +17,18 @@ const userReducer = (
 ): UserState => {
   switch (action.type) {
     case LOG_IN_REQUEST:
+      return { ...state };
     case LOG_IN_SUCCESS:
+      return {
+        ...state,
+        data: action.payload as {
+          id: string;
+          nickname: string;
+        },
+      };
     case LOG_IN_ERROR:
     case LOG_OUT_REQUEST:
+      return { ...state, data: null };
     default:
       return state;
   }

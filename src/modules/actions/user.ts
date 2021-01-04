@@ -21,4 +21,5 @@ export const logInError = (error: Error) => ({
   type: LOG_IN_ERROR,
   payload: error,
 });
+
 export const logOut = () => ({ type: LOG_OUT_REQUEST });

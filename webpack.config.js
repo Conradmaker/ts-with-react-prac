@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development', //production
   devtool: 'eval', //hidden-source-map
   resolve: {
-    extensions: ['.jsx', '.js', '.tsx', 'ts'],
+    extensions: ['.jsx', '.js', '.tsx', '.ts'],
   },
   entry: {
     app: './src/client.tsx',
